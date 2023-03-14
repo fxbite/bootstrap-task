@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Page Wonder Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <style>
+        :root {
+            --first-color: white;
+            --secondary-color: black
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 100%;
+        }
+
+        .main-section .row {
+            padding: 20px;
+        }
+
+        .center-vertical {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        header {
+            height: 6vh;
+        }
+
+        footer {
+            background-color: var(--secondary-color);
+            height: 10vh;
+            color: white; 
+        }
+
+        .introduction-section {
+            background-image: url("../img/resource2/bg.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 94vh;
+            opacity: 0.8;
+            color: var(--first-color);
+        }
+
+        #btn-color {
+            margin-top: 15px;
+            background-color: #ee0979;
+            border-radius: 30px;
+            border: none;
+            padding: 18px 20px;
+            color: white;
+            font-size: small;
+        }
+
+        #btn-color:hover {
+            background-color: #c0015d;
+        }
+
+        .item-container {
+            padding: 50px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+
+        <!-- Header -->
+        <header>
+
+        </header>
+
+        <!-- Section Introduction -->
+        <section class="introduction-section">
+            <div class="overlay center-vertical">
+                <div class="container center-vertical">
+                    <h1 class="text-center">One Page Wonder</h1>
+                    <h2 class="text-center">Will Rock Your Socks Off</h2>
+                    <button type="button" id="btn-color">LEARN MORE</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Section -->
+        <section class="main-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 item-container order-2 order-md-1">
+                        <h2>For those about to rock...</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque eligendi eum tempora quibusdam aperiam facere reprehenderit, dolore perspiciatis aliquid! Saepe illum consectetur ab rem dolorem fugiat adipisci molestias in ducimus!</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 item-container center-vertical oerder-1 order-md-2">
+                        <img src="../img/resource2/01.jpg" class="rounded-circle" alt="festival" width="250px">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 item-container center-vertical">
+                        <img src="../img/resource2/02.jpg" class="rounded-circle" alt="festival" width="250px">
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 item-container">
+                        <h2>We salute you!</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus cum id ex nihil laborum esse iste maiores quibusdam. Officiis, eaque. Inventore error laudantium sequi consectetur veritatis rerum quidem autem minima?</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-6 item-container order-2 order-md-1">
+                        <h2>Let there be rock!</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus nihil fugiat commodi provident totam minus illum natus debitis, corporis, quia voluptas inventore odit itaque laboriosam repudiandae. Officiis sapiente maiores dolore.</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-6 item-container center-vertical order-1 order-md-2">
+                        <img src="../img/resource2/03.jpg" class="rounded-circle" alt="festival" width="250px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="center-vertical">
+           <p style="margin-bottom: unset;">Copyright &copy; Your Website 2020</p>
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Portfolio Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+    <style>
+         :root {
+            --main-color: black;
+            --secondary-color: white;
+            --third-color: #1d809f;
+        }
+
+        .center-vertical {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .circle-image {
+            background-color: var(--secondary-color);
+            border-radius: 80px;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 8px;
+        }
+
+        .icon-control {
+            font-size: x-large
+        }
+
+        .content-1 {
+            background-image: url("../img/resource3/bg-masthead.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .content-2 {
+            height: 40vh;
+        }
+
+        .content-3 {
+            padding: 80px;
+            background-color: var(--third-color);
+            color: var(--secondary-color);
+        }
+
+        .content-4 {
+            background-image: url("../img/resource3/bg-callout.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 60vh;
+        }
+        
+        .content-5 {
+            padding: 80px;
+        }
+
+        .container-project {
+            position: relative;
+            color: var(--secondary-color);
+        }
+
+        .centered {
+            position: absolute;
+            top: 60%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content-6 {
+            background-color: var(--third-color);
+            height: 40vh;
+            color: var(--secondary-color);
+        }
+
+        .content-7 {
+           height: 50vh;
+        }
+
+        footer {
+            padding: 80px;
+        }
+
+        .circle-image-footer {
+            width: 50px;
+            height: 50px;
+            background-color: var(--third-color);
+            border-radius: 30px;
+            margin: 5px;
+            color: var(--secondary-color);
+        }
+
+        h1, h2 {
+            font-weight: bold;
+        }
+
+        button {
+            font-weight: bold !important;
+            padding: 15px 20px !important;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+
+        <!-- Section 1 -->
+        <section class="content-1 center-vertical">
+            <div class="container center-vertical">
+                <h1 class="text-center">Stylish Portfolio</h1>
+                <p style="font-weight: bold;" class="text-center">A Free Bootstrap Theme by Start Bootstrap</p>
+                <button type="button" class="btn btn-primary mt-3">Find Out More</button>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="content-2 center-vertical">
+            <div class="container center-vertical">
+                <h3 class="text-center">Stylish Portfolio is the perfect theme for your next project!</h3>
+                <p class="text-center">
+                    This theme features a flexible, UX friendly sidebar menu 
+                    and stock photos from our friends at Unsplash!
+                </p>
+                <button type="button" class="btn btn-dark mt-3">What We Offer</button>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="content-3 center-vertical">
+            <p style="margin-bottom: 3px; color: orange;">SERVICES</p>
+            <h2 class="text-center">What We Offer</h2>
+            <div class="container mt-3 center-vertical">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3 center-vertical" style="justify-content: unset; padding: 20px;">
+                        <div class="circle-image center-vertical">
+                            <span style="color: black;" class="icon-screen-smartphone icon-control"></span>
+                        </div>
+                        <h4 class="text-center">Responsive</h4>
+                        <p class="text-center">Looks great on any screen size!</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 center-vertical" style="justify-content: unset; padding: 20px;">
+                        <div class="circle-image center-vertical">
+                            <span style="color: black;" class="icon-pencil icon-control"></span>
+                        </div>
+                        <h4 class="text-center">Redesigned</h4>
+                        <p class="text-center">Freshly redesigned for Bootstrap 4.</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 center-vertical" style="justify-content: unset; padding: 20px;">
+                        <div class="circle-image center-vertical">
+                            <span style="color: black;" class="icon-like icon-control"></span>
+                        </div>
+                        <h4 class="text-center">Favorited</h4>
+                        <p class="text-center">
+                            Millions of users
+                            <i class="fas fa-heart"></i>
+                            Start Bootstrap!</p>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3 center-vertical" style="justify-content: unset; padding: 20px;">
+                        <div class="circle-image center-vertical">
+                            <span style="color: black;" class="icon-mustache icon-control"></span>
+                        </div>
+                        <h4 class="text-center">Question</h4>
+                        <p class="text-center">I mustache you a question...</p>
+                    </div>
+                </div>  
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="content-4 center-vertical">
+            <div class="container center-vertical">
+                <h2 class="text-center">Welcome to your <br> next website!</h2>
+                <button type="button" class="btn btn-primary mt-3">Download Now!</button>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="content-5 center-vertical">
+            <p style="margin-bottom: 3px; color: orange;">PORTFOLIO</p>
+            <h2 class="text-center">Recent Projects</h2>
+            <div class="container mt-3 center-vertical">
+                <div class="row g-0">
+                    <div class="col-12 col-md-12 col-lg-6 center-vertical container-project">
+                        <img src="../img/resource3/portfolio-1.jpg" alt="project" width="100%">
+                        <div class="caption-content centered">
+                            <h2>Stationary</h2>
+                            <p>A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6 center-vertical container-project">
+                        <img src="../img/resource3/portfolio-2.jpg" alt="project" width="100%">
+                        <div class="caption-content centered">
+                            <h2>Ice Cream</h2>
+                            <p>A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-12 col-md-12 col-lg-6 center-vertical container-project">
+                        <img src="../img/resource3/portfolio-3.jpg" alt="project" width="100%">
+                        <div class="caption-content centered">
+                            <h2>Strawberries</h2>
+                            <p>Strawberries are such a tasty snack, especially with a little sugar on the top!</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-12 col-lg-6 center-vertical container-project">
+                        <img src="../img/resource3/portfolio-4.jpg" alt="project" width="100%">
+                        <div class="caption-content centered">
+                            <h2>Workspace</h2>
+                            <p>A yellow workspace with some scissors, pencils, and other objects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="content-6 center-vertical">
+            <h3 class="text-center">The buttons below are impossible to resist...</h3>
+            <div class="container mt-3" style="display: flex; justify-content: center;">
+                <button type="button" class="btn btn-light">Click Me!</button>
+                <button type="button" class="btn btn-dark ms-3">Look at Me!</button>
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="content-7">
+            <iframe width="100%" height="100%" src="https://maps.google.com/maps?q=fsoft&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+            </iframe>
+        </section>
+
+        <!-- Footer -->
+        <footer class="center-vertical">
+            <div class="container" style="display: flex; justify-content: center;">
+                <div class="circle-image-footer center-vertical">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="circle-image-footer center-vertical">
+                    <i class="fa-brands fa-twitter"></i>
+                </div>
+                <div class="circle-image-footer center-vertical">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+            </div>
+            <p class="text-center mt-3">Copyright &copy; Your website 2020</p>
+        </footer>
+    </main>
+</body>
+</html>

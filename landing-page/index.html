@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Task</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --main-color: black;
+            --secondary-color: white;
+            --third-color: #FFFFF9
+        }
+
+        header {
+            padding: 5px;
+            height: 6vh;
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--third-color);
+        }
+
+        i {
+            padding: 10px;
+            color: #0d6efd;
+            font-size: x-large
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .center-vertical {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .items-content-listed {
+            padding: 50px;
+        }
+
+        .content-1 {
+            background-image: url("../img/resource1/bg-masthead.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 94vh;
+            color: var(--secondary-color);
+        }
+
+        .content-2 {
+            background-color: var(--third-color);
+            padding: 80px;
+        }
+
+        .items-content-2 {
+            padding: 50px;
+        }
+
+        .content-6 {
+            background-color: var(--third-color);
+            padding: 80px;
+        }
+
+        .items-content-6 {
+            padding: 50px;
+        }
+
+        .content-6 h4 {
+            margin-top: 10px;
+        }
+
+        .content-7 {
+            background-image: url("../img/resource1/bg-masthead.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: var(--secondary-color);
+            height: 50vh;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Header -->
+        <header>
+            <h4 style="margin-bottom: 0; margin-left: 10%; display: flex; align-items: center;">Start Bootstrap</h4>
+            <button type="button" class="btn btn-primary" style="margin-right: 10%;">Sign In</button>
+        </header>
+
+        <!-- Section 1 -->
+        <section class="content-1 center-vertical">
+            <h1 class="text-center">Build a landing page for your business</h1>
+            <h1 class="text-center">or project and generate more leads!</h1>
+            <div class="container center-vertical" style="margin-top: 8px;">
+                <div class="row g-0" style="width: 50%;">
+                    <div class="col-sm-12 col-md-8 col-lg-9" style="padding: 5px;">
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="email" placeholder="Enter your email...">
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3" style="padding: 5px;">
+                        <button style="width: 100%;" type="button" class="btn btn-primary">Sign up!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="content-2 center-vertical">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 col-lg-4 center-vertical items-content-2">
+                        <img src="../img/resource1/fullrespontive.png" alt="responsive" width="80px">
+                        <h2 class="text-center">Fully Responsive</h2>
+                        <p class="text-center">This theme will look great on any device, no matter the size!</p>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 center-vertical items-content-2">
+                        <img src="../img/resource1/boostrap.jpg" alt="bootstrap" width="80px">
+                        <h2 class="text-center">Bootstrap 4 Ready</h2>
+                        <p class="text-center">Featuring the latest build of the new Bootstrap 4 framework!</p>
+                    </div>
+                    <div class="col-12 col-md-4 col-lg-4 center-vertical items-content-2">
+                        <img src="../img/resource1/ticked.png" alt="ticked" width="60px">
+                        <h2 class="text-center">Easy to Use</h2>
+                        <p class="text-center">Ready to use with own content, or customize the source files!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="content-3">
+            <div class="row g-0">
+                <div class="col-12 col-md-6 col-lg-6 center-vertical items-content-listed order-2 order-md-1" style="align-items: unset;">
+                    <h2>Fully Responsive Design</h2>
+                    <p>
+                        When you use a theme created by Start Bootstrap, you know that the theme look will look great 
+                        on any device, whether it's a phonem tablet, or desktop the page will behave responsively!
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 order-1 order-md-2">
+                    <img src="../img/resource1/bg-showcase-1.jpg" alt="iphone" width="100%" height="100%">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4 -->
+        <section class="content-4">
+            <div class="row g-0">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <img src="../img/resource1/bg-showcase-2.jpg" alt="coding" width="100%" height="100%">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6 center-vertical items-content-listed" style="align-items: unset;">
+                    <h2>Updated For Bootstrap 4</h2>
+                    <p>
+                        Newly improved, and full of great utility classes, Bootstrap 4 is leading the way 
+                        in mobile responsive web development! All of the theme on Start Bootstrap are now using Bootstrap 4!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5 -->
+        <section class="content-5">
+            <div class="row g-0">
+                <div class="col-12 col-md-6 col-lg-6 center-vertical items-content-listed order-2 order-md-2" style="align-items: unset;">
+                    <h2>Easy to Use & Customize</h2>
+                    <p>
+                        Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper 
+                        customization options. Out of the box, just add your content and images, and your new landing page 
+                        will be ready to go!
+                    </p>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 order-1 order-md-2">
+                    <img src="../img/resource1/bg-showcase-3.jpg" alt="logic" width="100%" height="100%">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 6 -->
+        <section class="content-6 center-vertical">
+            <h2 class="text-center">What people are saying...</h2>
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-12 col-lg-4 center-vertical items-content-6">
+                        <img src="../img/resource1/testimonials-1.jpg" class="rounded-circle" width="200px" height="200px" alt="avatar women">
+                        <h4>Margaret E.</h4>
+                        <p class="text-center">"This is fantastic! Thanks so much guys!"</p>
+                    </div>
+                    <div class="col-12 col-lg-4 center-vertical items-content-6">
+                        <img src="../img/resource1/testimonials-2.jpg" class="rounded-circle" width="200px" height="200px" alt="avatar men">
+                        <h4>Fred S.</h4>
+                        <p class="text-center">"Bootstrap is amazing. I've been using it to create lots of super nice landing pages."</p>
+                    </div>
+                    <div class="col-12 col-lg-4 center-vertical items-content-6">
+                        <img src="../img/resource1/testimonials-3.jpg" class="rounded-circle" width="200px" height="200px" alt="avatar women">
+                        <h4>Sarah W.</h4>
+                        <p class="text-center">"Thanks so much for making these free resources available to us!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section class="content-7 center-vertical">
+            <h2 class="text-center">Ready to get started? Sign up now!</h2>
+            <div class="container center-vertical" style="margin-top: 8px;">
+                <div class="row g-0" style="width: 50%;">
+                    <div class="col-sm-12 col-md-8 col-lg-9" style="padding: 5px;">
+                        <input type="email" class="form-control" id="inputEmail" aria-describedby="email" placeholder="Enter your email...">
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-3" style="padding: 5px;">
+                        <button style="width: 100%;" type="button" class="btn btn-primary">Sign up!</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="container" style="padding: 50px;">
+            <div class="row">
+                <div class="col-md-6" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <span style="margin-bottom: 5px;">
+                        <a href="#">About</a>
+                        &middot;
+                        <a href="#">Contact</a>
+                        &middot;
+                        <a href="#">Terms of Use</a>
+                        &middot;
+                        <a href="#">Privacy Policy</a>
+                    </span>
+                    <span class="mb-3 mb-md-0 text-muted">&copy; Your Website 2019. All Rights Reversed</span>
+                </div>
+                <ul class="col-md-6" style="display: flex; justify-content: center; justify-items: center;">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                </ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
