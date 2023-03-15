@@ -7,10 +7,13 @@
     <title>One Page Wonder Task</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/fontawesome.min.css" integrity="sha512-cHxvm20nkjOUySu7jdwiUxgGy11vuVPE9YeK89geLMLMMEOcKFyS2i+8wo0FOwyQO/bL8Bvq1KMsqK4bbOsPnA==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
     <style>
         :root {
             --first-color: white;
-            --secondary-color: black
+            --secondary-color: black;
+            --black-light: rgba(0,0,0, 0.5);
         }
 
         .overlay {
@@ -31,7 +34,84 @@
         }
 
         header {
-            height: 6vh;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            background-color: var(--black-light);
+            z-index: 2;
+        }
+
+        header h4 {
+            margin-bottom: 0; 
+            position: absolute;
+            left: 10%;
+            top: 20%;
+            color: var(--first-color);
+        }
+
+        .group-button {
+          position: absolute;
+          right: 10%;
+          top: 25%;
+        }
+
+        .group-button a {
+            text-decoration: none;
+            color: var(--first-color);
+            padding: 5px;
+            opacity: 0.5;
+        }
+
+        .group-button a:hover {
+            opacity: 0.8;
+        }
+
+        .toggle-button {
+            display: none;
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 10%;
+            top: 25%;
+            border: 1px solid var(--first-color);
+            color: var(--first-color);
+            cursor: pointer;
+            opacity: 0.5;
+        }
+
+        .toggle-button:hover {
+            opacity: 0.7;
+        }
+
+        .collapse-menu {
+            position: fixed;
+            top: -100px;
+            width: 100%;
+            height: 80px;
+            color: var(--first-color);
+            background-color: var(--black-light);
+            z-index: 1;
+            -webkit-transition: top 1s;
+            -moz-transition: top 1s;
+            -o-transition: top 1s;
+            transition: top 1s;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu a {
+            padding: 8px 40px;
+            text-decoration: none;
+            color: var(--first-color);
+            opacity: 0.5;
+        }
+
+        .menu a:hover {
+            opacity: 0.8;
         }
 
         footer {
@@ -45,7 +125,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 94vh;
+            height: 100vh;
             opacity: 0.8;
             color: var(--first-color);
         }
@@ -67,15 +147,40 @@
         .item-container {
             padding: 50px;
         }
+
+        @media screen and (max-width: 576px) {
+            .toggle-button {
+                display: flex;
+            }
+
+            .group-button {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
+
+    <!-- Header -->
+    <header>
+        <h4>Start Bootstrap</h4>
+        <div class="group-button">
+            <a href="#">SIGN UP</a>
+            <a href="#">SIGN IN</a>
+        </div>
+        <div class="toggle-button center-vertical">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="collapse-menu dismiss">
+        <div class="menu">
+            <a href="#">SIGN UP</a>
+            <a href="#">SIGN IN</a>
+        </div>
+    </div>
+
     <main>
-
-        <!-- Header -->
-        <header>
-
-        </header>
 
         <!-- Section Introduction -->
         <section class="introduction-section">
@@ -126,5 +231,25 @@
            <p style="margin-bottom: unset;">Copyright &copy; Your Website 2020</p>
         </footer>
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function() {
+            let clicked = true;
+            $(".toggle-button").click(function() {
+                console.log('clicked')
+                if(clicked)
+                {
+                    clicked = false;
+                    $(".collapse-menu").css({"top": "50px"});
+                }
+                else
+                {
+                    clicked = true;
+                    $(".collapse-menu").css({"top": "-100px"});
+                }
+            });
+        })
+    </script>
 </body>
 </html>

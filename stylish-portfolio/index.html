@@ -15,6 +15,8 @@
             --main-color: black;
             --secondary-color: white;
             --third-color: #1d809f;
+            --blue-dark: #1a718b;
+            --blue-light: #249cc1;
         }
 
         html {
@@ -70,6 +72,10 @@
             padding: 80px;
         }
 
+        .caption-content {
+            width: 80%;
+        }
+
         .container-project {
             position: relative;
             color: var(--secondary-color);
@@ -78,7 +84,7 @@
         .centered {
             position: absolute;
             top: 60%;
-            left: 40%;
+            left: 50%;
             transform: translate(-50%, -50%);
         }
 
@@ -128,14 +134,17 @@
             z-index: 2;
             top: 15px;
             right: 15px;
-           
         }
         
         .button-top {
             display: none;
-            z-index: 2;
+            z-index: 1;
             right: 15px;
             bottom: 15px;
+        }
+
+        .button-sidebar-collapse:hover, .button-top:hover {
+            opacity: 0.7;
         }
 
         .button-sidebar-collapse i, .button-top i {
@@ -143,31 +152,116 @@
         }
 
         .sidebar-collapse {
+            display: none;
             position: fixed;
             right: 0;
-            width: 350px;
+            width: 250px;
             height: 100%;
-            z-index: 1;
+            z-index: 2;
             background-color: var(--third-color);
+        }
+
+        .logo a {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            color: var(--secondary-color);
+            background-color: var(--blue-dark);
+            text-decoration: none;
+            font-size: large;
+        }
+
+        .menu-sidebar a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            display: flex;
+            flex-direction: column;
+            padding: 15px 20px;
+        }
+
+        .menu-sidebar a:hover {
+            background-color: var(--blue-light);
+        }
+
+        .selected {
+            animation: slide-in 0.5s forwards;
+            -webkit-animation: slide-in 0.5s forwards;
+        }
+
+        .dismiss {
+            animation: slide-out 0.5s forwards;
+            -webkit-animation: slide-out 0.5s forwards;
+        }
+
+        @keyframes slide-in {
+            0% {
+                -webkit-transform: translateX(100%);
+            }
+            100% {
+                -webkit-transform: translateX(0%);
+            }
+        }
+
+        @-webkit-keyframes slide-in {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+
+        @keyframes slide-out {
+            0% {
+                transform: translateX(0%);
+            }
+            100% {
+                transform: translateX(100%);
+            }
+        }
+
+        @-webkit-keyframes slide-out {
+            0% {
+                -webkit-transform: translateX(0%);
+            }
+            100% {
+                -webkit-transform: translateX(100%);
+            }
+        }
+
+        @media screen and (max-width: 992px) {
+            .container-project {
+                margin-bottom: 8px;
+            }
         }
 
     </style>
 </head>
 <body>
     <!-- Sidebar Collapse -->
-    <div class="sidebar-collapse">
-
+    <div class="sidebar-collapse dismiss">
+        <div class="logo">
+            <a href="#home">Start Bootstrap</a>
+        </div>
+        <div class="menu-sidebar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </div>
     </div>
 
      <!-- Back to top -->
-     <div class="button-fixed button-top center-vertical" id="top-button" onclick="topFunction()">
+     <div class="button-fixed button-top center-vertical" id="top-button">
         <i class="fa-solid fa-angle-up"></i>
     </div>
 
     <main>
         <!-- Section 1 -->
-        <section class="content-1 center-vertical" id="main">
-            <div class="button-fixed button-sidebar-collapse center-vertical">
+        <section class="content-1 center-vertical" id="home">
+            <div class="button-fixed button-sidebar-collapse center-vertical" id="button-sidebar">
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="container center-vertical">
@@ -178,7 +272,7 @@
         </section>
 
         <!-- Section 2 -->
-        <section class="content-2 center-vertical">
+        <section class="content-2 center-vertical" id="about">
             <div class="container center-vertical">
                 <h3 class="text-center">Stylish Portfolio is the perfect theme for your next project!</h3>
                 <p class="text-center">
@@ -190,7 +284,7 @@
         </section>
 
         <!-- Section 3 -->
-        <section class="content-3 center-vertical">
+        <section class="content-3 center-vertical" id="services">
             <p style="margin-bottom: 3px; color: orange;">SERVICES</p>
             <h2 class="text-center">What We Offer</h2>
             <div class="container mt-3 center-vertical">
@@ -239,7 +333,7 @@
         </section>
 
         <!-- Section 5 -->
-        <section class="content-5 center-vertical">
+        <section class="content-5 center-vertical" id="portfolio">
             <p style="margin-bottom: 3px; color: orange;">PORTFOLIO</p>
             <h2 class="text-center">Recent Projects</h2>
             <div class="container mt-3 center-vertical">
@@ -288,8 +382,8 @@
         </section>
 
         <!-- Section 7 -->
-        <section class="content-7">
-            <iframe width="100%" height="100%" src="https://maps.google.com/maps?q=fsoft&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        <section class="content-7" id="contact">
+            <iframe width="100%" height="100%" src="https://maps.google.com/maps?q=FPT+Software+Ho+Chi+Minh+-+F-Town+3&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
             </iframe>
         </section>
 
@@ -310,28 +404,51 @@
         </footer>
     </main>
 
-    <script>
-        // Get the button
-        const topButton = document.getElementById("top-button");
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>  
+        // Back to top
+        $(document).ready(function() {
+            // Get the button
+            const topButton = $('#top-button');
+            
+            $(window).scroll(function() {
+                scrollFunction();
+            });
+    
+            topButton.click(function(event) {
+                topFunction()
+                event.preventDefault()
+            })
+    
+            // When the user scrolls down 20px from the top of the document, show the button
+            function scrollFunction() {
+                if ($(document).scrollTop() > 20) {
+                    topButton.css("display", "flex");
+                } else {
+                    topButton.css("display", "none");
+                }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+                $("html, body").scrollTop(0);
+            }
+        })
+
+        // Toggle sidebar
+        $(document).ready(function() {
+            $('#button-sidebar').click(function(event) {
+                if ($('.sidebar-collapse').hasClass('dismiss')) {
+                    $('#button-sidebar i').replaceWith('<i class="fa-solid fa-xmark"></i>')
+                    $('.sidebar-collapse').removeClass('dismiss').addClass('selected').show();
+                } else {
+                    $('#button-sidebar i').replaceWith('<i class="fa-solid fa-bars"></i>')
+                    $('.sidebar-collapse').removeClass('selected').addClass('dismiss');
+                }
+                event.preventDefault();
+            });
+        })
         
-        // When the user scrolls down 20px from the top of the document, show the button
-        window.onscroll = function() {
-            scrollFunction()
-        };
-        
-        function scrollFunction() {
-          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-            topButton.style.display = "flex";
-          } else {
-            topButton.style.display = "none";
-          }
-        }
-        
-        // When the user clicks on the button, scroll to the top of the document
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
     </script>
 </body>
 </html>
